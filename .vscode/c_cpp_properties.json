@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/node_modules/*",
+        "${workspaceFolder}/node_modules/node-addon-api",
+        "C:\\Users\\matth\\AppData\\Local\\node-gyp\\Cache\\14.17.5\\include\\node"
+      ],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "windowsSdkVersion": "10.0.19041.0",
+      "compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-gcc-x64",
+      "configurationProvider": "ms-vscode.cpptools"
+    }
+  ],
+  "version": 4
+}
