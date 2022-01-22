@@ -16,6 +16,8 @@
 
 - Afterwards, go ahead and run the command "node-gyp configure" to create a build folder with boilerplate code. Included in the directory is a subdirectory called "Release" with your dll appended .node file which you can use in the ./electron-react-demo/index.js file to log to the console whatever you would like. Be sure to include the new dll in the index.js file
 
+- Finally, to run the index.js file, you will need to run the command "node index.js"
+
 - That should be all. Please, let me know if you have any questions. I will do my best to continue my research to help you communicate with the application effectively.
 
 **_ Happy Coding 😄❗ _**
