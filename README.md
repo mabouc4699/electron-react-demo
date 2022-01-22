@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+**_ Instructions (Dylan) _**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Download Repo
+- Within the VSCode Terminal run command "npm install" and "npm install -S node-addon-api" in that order
+- Once dependencies are installed, you are free to modify the code however you like.
 
-## Available Scripts
+**_ Suggestions _**
 
-In the project directory, you can run:
+- If you'd like to try putting custom code (your recent code) into the src folder, you will need to make the corresponding changes in the binding.gyp JSON file (target_name, sources)
 
-### `npm start`
+  1. Target_name is the name of the dll file that will be created after
+  2. Sources are the file names (currently greeting.cpp and index.cpp)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- After adding your c++ / header files and modifying binding.gyp, go ahead and pull up these urls: {"https://nodejs.org/api/n-api.html", "https://medium.com/jspoint/a-simple-guide-to-load-c-c-code-into-node-js-javascript-applications-3fcccf54fd32"} for documentation on communicating with the NAPI. It looks like c++ with namespace NAPI from what I'm seeing.
+  Ex: NAPI::String greetHello()...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Afterwards, go ahead and run the command "node-gyp configure" to create a build folder with boilerplate code. Included in the directory is a subdirectory called "Release" with your dll appended .node file which you can use in the ./electron-react-demo/index.js file to log to the console whatever you would like. Be sure to include the new dll in the index.js file
 
-### `npm test`
+- That should be all. Please, let me know if you have any questions. I will do my best to continue my research to help you communicate with the application effectively.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**_ Happy Coding 😄❗ _**
