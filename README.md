@@ -14,7 +14,7 @@
 - After adding your c++ / header files and modifying binding.gyp, go ahead and pull up these urls: {"https://nodejs.org/api/n-api.html", "https://medium.com/jspoint/a-simple-guide-to-load-c-c-code-into-node-js-javascript-applications-3fcccf54fd32"} for documentation on communicating with the NAPI. It looks like c++ with namespace NAPI from what I'm seeing.
   Ex: NAPI::String greetHello()...
 
-- Afterwards, go ahead and run the command "node-gyp configure" to create a build folder with boilerplate code. Included in the directory is a subdirectory called "Release" with your dll appended .node file which you can use in the ./electron-react-demo/index.js file to log to the console whatever you would like. Be sure to include the new dll in the index.js file
+- Afterwards, go ahead and run the command "node-gyp configure" {if this does not work: "node-gyp rebuild"} to create a build folder with boilerplate code. Included in the directory is a subdirectory called "Release" with your dll appended .node file which you can use in the ./electron-react-demo/index.js file to log to the console whatever you would like. Be sure to include the new dll in the index.js file
 
 - Finally, to run the index.js file, you will need to run the command "node index.js"
 
