@@ -1,11 +1,11 @@
 {
   "targets": [
     {
-      "target_name": "greet",
+      "target_name": "dll",
       "cflags!": [ "-fno-exceptions" ],
       "cflags_cc!": [ "-fno-exceptions" ],
       "sources": [
-        "./src/greeting.cpp",
+        "./src/modules.cpp",
         "./src/index.cpp"
       ],
       "include_dirs": [

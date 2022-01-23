@@ -1,4 +1,5 @@
-const greetModule = require("./build/Release/greet.node");
+const dllModule = require("./build/Release/DLL.node");
 
-console.log("Greet Module: ", greetModule);
-console.log("Greet Hello: ", greetModule.greetHello());
+console.log("Module: ", dllModule);
+console.log("Greeting: ", dllModule.Greeting());
+console.log("Outputting Number: ", dllModule.PrintDouble());
