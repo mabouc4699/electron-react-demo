@@ -2,21 +2,23 @@
 #include <string>
 #include "greeting.h"
 
+using namespace Napi;
+
 // Native C++ function that is assigned to 'greetHello' property on exports object
-Napi::String greetHello(const Napi::CallbackInfo& info) {
-    Napi::Env env = info.Env();
+String greetHello(const CallbackInfo& info) {
+    Env env = info.Env();
 
     // Call 'helloUser' from 'greeting.cpp' file
     std::string result = helloUser("Mike");
 
-    return Napi::String::New(env, result);
+    return String::New(env, result);
 }
 
 //Callback method when module is registered
-Napi::Object Init(Napi::Env env, Napi::Object exports) {
+Object Init(Env env, Object exports) {
 
     // Set key on exports object
-    exports.Set(Napi::String::New(env, "greetHello"), Napi::Function::New(env, greetHello));
+    exports.Set(String::New(env, "greetHello"), Function::New(env, greetHello));
 
     return exports;
 }

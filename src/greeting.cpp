@@ -5,3 +5,7 @@
 std::string helloUser( std::string name ) {
   return "Hello " + name + "!";
 }
+
+int someNumber(int num) {
+  return num;
+}
