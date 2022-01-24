@@ -12,11 +12,11 @@ using namespace Napi;
     Init function creates the key value pairs ("Greeting", greeting function) that are then located in the DLL.node 
 */
 
-// Native C++ function that is assigned to 'greetHello' property on exports object
+// Native C++ function that is assigned to 'Greeting' property on exports object
 String greeting(const CallbackInfo& info) {
     Env env = info.Env();
 
-    // Call 'helloUser' from 'greeting.cpp' file
+    // Call 'helloUser' from 'modules.cpp' file
     std::string result = greetUser("Mike");
 
     return String::New(env, result);
@@ -25,6 +25,7 @@ String greeting(const CallbackInfo& info) {
 Number printNumber(const CallbackInfo& info) {
     Env env = info.Env();
 
+    // Call 'printNum' from 'modules.cpp' file
     Number num = Number::New(env, printNum(8.4));
 
     return Number::New(env, num);
@@ -33,6 +34,7 @@ Number printNumber(const CallbackInfo& info) {
 Number printUserInput(const CallbackInfo& info) {
     Env env = info.Env();
 
+    // Call 'printUserInputNum' from 'modules.cpp' file
     Number num = Number::New(env, printUserInputNum());
 
     return Number::New(env, num);

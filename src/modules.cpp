@@ -15,5 +15,6 @@ int printUserInputNum() {
   std::cout << "Please enter a digit you would like logged to the console: " << std::endl;
   int num;
   std::cin >> num;
+  std::cout << num;
   return num;
 }
