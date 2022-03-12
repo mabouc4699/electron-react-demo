@@ -1,0 +1,15 @@
+.slideContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 25px;
+}
+
+.slideContainer > .sliderContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.slideContainer > .sliderContainer > input {
+  background: #003366;
+}
